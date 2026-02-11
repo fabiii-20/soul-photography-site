@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-science: "Science Gothic", sans-serif;
+
+  /* Custom Colors - Premium Minimal */
+  --color-primary: #0a0a0a;
+  --color-secondary: #fdfdfd;
+  --color-accent: #b89a6b;
+  /* Sophisticated Gold */
+  --color-background: #ffffff;
+  --color-surface: #f9f9f9;
+  --color-text-main: #111111;
+  --color-text-muted: #555555;
+  --color-border: #eeeeee;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  font-family: var(--font-science), sans-serif;
+  @apply antialiased selection:bg-[var(--color-accent)] selection:text-white;
+}
+
+/* Typography Enhancements */
+h1,
+h2,
+h3,
+h4 {
+  @apply tracking-tighter font-bold;
+}
+
+/* Utilities */
+@layer utilities {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6 sm:px-10 lg:px-16;
+  }
+
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(184, 154, 107, 0.2);
+  }
+
+  .cinematic-shadow {
+    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Smooth Transitions */
+* {
+  @apply transition-all duration-500 ease-out;
+}
