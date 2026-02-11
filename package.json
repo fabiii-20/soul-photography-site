@@ -8,9 +8,6 @@
     "start": "next start",
     "lint": "eslint"
   },
-  "prisma": {
-    "seed": "tsx prisma/seed.ts"
-  },
   "dependencies": {
     "@img-comparison-slider/react": "^8.0.2",
     "bcryptjs": "^3.0.3",
